@@ -11,6 +11,13 @@ In this project I'm demonstrating you how to use [Terraform](https://www.terrafo
 You may the detailed explanation of that example repository in the following article: [Manage Kubernetes Cluster with Terraform and Argo CD](https://piotrminkowski.com/2022/06/28/manage-kubernetes-cluster-with-terraform-and-argo-cd/)
 
 Modifications by Jeff Soehner
+-----------------------------
+
+I used a remote kind cluster using another setup script from cluster-1 repo (https://github.com/jsoehner/cluster-1)
+This requires a VM with docker and kind environment setup prior to deployment. The setup script (https://github.com/jsoehner/cluster-1/blob/main/create-ubuntu-cluster-v1.sh) assumes you have mkcert installed and you have already configured your
+system with a client certificate. (Outside of the scope of this demo)
+
+
 
 First, clone that repo:
 ```shell
