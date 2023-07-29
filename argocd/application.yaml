@@ -1,0 +1,17 @@
+server:
+  additionalApplications:
+    - name: cluster-config
+      namespace: argocd
+      project: default
+      source:
+        repoURL: https://github.com/jsoehner/terraform-argo-kafka-k8s-demo.git
+        targetRevision: HEAD
+        path: argocd/manifests/cluster
+        directory:
+          recurse: true
+      destination:
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        automated:
+          prune: false
+          selfHeal: false
